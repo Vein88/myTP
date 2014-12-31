@@ -6,9 +6,8 @@ class MY_Controller extends CI_Controller {
 		try {
 			parent::__construct();
 			$this->CI = & get_instance();		
-		} catch (Exception $e) {
-			$str = $e->getCode() . ':' . $e->getMessage();
-			exit;
+		} catch (MY_Exception $e) {
+			$e->console();
 		}
 	}
 }

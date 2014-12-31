@@ -1,5 +1,8 @@
 //fis.cofig.set('settings.sprinter.csssprintes');
 fis.config.set('namespace', 'blog');
+
+//fis.config.set('root_dir', '/home/vein/myTP');
+
 fis.config.set('roadmap.path', []);
 fis.config.set('modules.parser.less', 'less');
 fis.config.set('roadmap.ext.less', 'css');
@@ -37,21 +40,6 @@ fis.config.merge({
 	},
 	deploy: {
 		local: [
-			{
-				from: '/configs/',
-				to: '../../.'
-			},
-			{
-				from: '/template/',
-				subOnly: true,
-				to: '../../application/views/template'
-			},
-			{
-				//static resources....
-				from: '/static/',
-				subOnly: true,
-				to: '/home/vein/static'
-			},
 			{
 				to: '../release'
 			}
