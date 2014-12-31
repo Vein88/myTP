@@ -1,3 +1,3 @@
-Tj University Graduation Project
+Tianjin University Graduation Project
 ========
 
