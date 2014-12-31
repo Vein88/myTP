@@ -1,0 +1,152 @@
+#!/bin/bash
+# write by liuzhuo[zerd liu] at 2009-03-05
+# liuzhuo@baidu.com [ecom-op->cpro,im,auction-op],suyang@baidu.com
+# 模块控制脚本模板
+# modified by r0c at 20091027  wangpeng02@baidu.com
+# 改成适合lighty的启动方式 并且启动时对当前目录不做限制
+
+version="0.0.91"
+build_time="2009-10-27"
+
+script_path=$(dirname $0)
+script_name=$(basename $0)
+program_name=$(echo ${script_name} | sed 's/\([[:alnum:]]\+\)_control$/\1/')
+nonum_program_name=$(echo ${program_name} | sed 's![0-9]*$!!')
+supervise_name=supervise.lighttpd
+
+# Lego config
+export LEGO_HOME=$(readlink -f ${script_path}"/../../..")
+export LIGHTTPD_HOME=${LEGO_HOME}"/env/lighttpd"
+export DOC_ROOT=${LIGHTTPD_HOME}"/htdocs"
+export LEGO_BUILDER_ROOT=${LEGO_HOME}"/env/legoappbuilder"
+export LEGO_RT_ROOT=${LEGO_HOME}"/pluginruntime"
+export LEGO_CPT_RT_ROOT=${LEGO_HOME}"/comptruntime-test"
+
+#echo $script_path $script_name $program_name $nonum_program_name
+#sleep 10
+program_status_path=${script_path}/../status
+program_log_path=${script_path}/../log/  #r0c modified
+#r0c comment it
+#program_flag_path=./flag/
+#program_data_path=./data/
+#program_assist_data_path=./data/assist_data
+
+pid_file=${program_status_path}/${program_name}.lck
+lighttpd_pid_file=${program_status_path}/${program_name}.pid
+pgrp=$(perl -e "print getpgrp()")
+
+## image only
+
+#supervise_path=~/supervise
+supervise_path=$LIGHTTPD_HOME
+supervise_status_path=${supervise_path}/status
+
+## image end
+
+function print_version() {
+
+cat <<-print_version
+	${script_name} ${version}
+	Copyright Baidu Inc.
+print_version
+}
+
+function usage() {
+
+cat <<-usage
+	Usage: ${script_name} start|stop|restart|reload|cleanup|version|help|check
+usage
+}
+
+function start() {
+		if [ -f ${pid_file} ]
+		then 
+	        	old_pgrp=$(cat ${pid_file})
+			echo "${program_name} (pid ${old_pgrp}) already running"
+			echo "lockfile:${pid_file}"
+        		exit 1
+		fi
+
+		mkdir -p ${supervise_status_path}/${program_name}
+		mkdir -p ${program_status_path}/${program_name}
+		mkdir -p ${program_log_path}
+		# r0c comment it
+		#mkdir -p ${program_flag_path}
+		#mkdir -p ${program_data_path}
+		#mkdir -p ${program_assist_data_path}
+		ulimit -c unlimited
+	${supervise_path}/bin/${supervise_name} ${supervise_status_path}/${program_name}  nohup setsid /bin/limit ${script_path}/../bin/${program_name} -D -f ${script_path}/../conf/${program_name}.conf  -m  ${script_path}/../lib/   0</dev/null   >&${program_log_path}/out_${program_name} &
+
+
+		echo ${pgrp} > ${pid_file} 
+}
+
+function stop() {
+		if [ ! -f ${pid_file} ]
+		then 
+			echo "${program_name} not running"
+			echo "lockfile:${pid_file}"
+		else	
+            echo "pid file:$pid_file"
+	        old_pgrp=$(cat ${pid_file})
+           	kill -9 -${old_pgrp}
+			#r0c add 由于setsid作用导致lighty和supervise不在一个组,所以还要单杀lighty
+			# killall -9 lighttpd 
+            kill -9 $(cat ${lighttpd_pid_file})
+			
+            rm -f ${lighttpd_pid_file}
+			rm -f ${pid_file}
+		fi
+
+}
+
+[ $# -ne 1 ] && echo "Wrong args number. [$# != 1]" && exit 1
+command_input=$1
+
+## 根据不同的参数选择不同的接口行为
+case X"${command_input}" in
+    Xstart)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令，将进程组ID写入pid文件，便于停止的时候杀掉进程组
+	start
+        ;;
+    Xstop)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令
+	stop
+        ;;
+    Xrestart)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令
+        stop
+	#是否需要延时?
+	start
+        ;;
+    Xreload)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令
+        { : ; }
+        ;;
+    Xcleanup)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令
+        { : ; }
+        ;;
+    Xcheck)
+        echo "${program_name} ${command_input}." 
+        ## 需要执行的命令,包括检查命令
+        { : ; }
+        ;;
+    Xhelp)
+        usage
+        ;;
+    Xversion)
+        print_version
+        ;;
+    *)
+        echo "Unsupport command [${command_input}]."
+        exit 1
+        ;; 
+esac
+
+exit 0

@@ -1,0 +1,20 @@
+.category-container {
+  background-color: white;
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.category-container .category-left,
+.category-container .category-right {
+  display: inline-block;
+  width: 40%;
+  margin-left: 5%;
+}
+.category-container .category-left ul,
+.category-container .category-right ul {
+  list-style: none;
+}
+.category-container .category-left ul li,
+.category-container .category-right ul li {
+  margin: 5px;
+}

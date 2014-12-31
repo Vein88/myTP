@@ -1,0 +1,95 @@
+2014-12-30 11:29:47: (log.c.166) server started 
+2014-12-30 11:30:11: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:11: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:11: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:11: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:11: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:11: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:11: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:11: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:11: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:11: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:11: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:11: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:11: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:11: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:11: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:11: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:14: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:14: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:14: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:14: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:14: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:14: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:14: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:14: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:14: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:14: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:14: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:14: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:14: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:14: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:14: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:14: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:15: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:15: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:15: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:15: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:16: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:16: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:16: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:16: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:16: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:16: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:16: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:16: (mod_proxy.c.396) connect delayed: 9 
+2014-12-30 11:30:16: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:16: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:16: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:16: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:24: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:24: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:24: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:24: (mod_proxy.c.396) connect delayed: 7 
+2014-12-30 11:30:24: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:24: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:24: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:24: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:24: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:24: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:24: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:24: (mod_proxy.c.396) connect delayed: 7 
+2014-12-30 11:30:24: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:24: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:24: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:24: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:37: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:37: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:37: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:37: (mod_proxy.c.396) connect delayed: 8 
+2014-12-30 11:30:37: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:37: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:37: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:37: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:30:37: (mod_proxy.c.1142) proxy - start 
+2014-12-30 11:30:37: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 11:30:37: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 11:30:37: (mod_proxy.c.396) connect delayed: 8 
+2014-12-30 11:30:37: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 11:30:37: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 11:30:37: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 11:30:37: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 11:39:57: (server.c.1558) server stopped by UID = 1000 PID = 9169 
+2014-12-30 11:39:58: (log.c.166) server started 
+2014-12-30 12:41:02: (mod_proxy.c.1142) proxy - start 
+2014-12-30 12:41:02: (mod_proxy.c.1183) proxy - ext found 
+2014-12-30 12:41:02: (mod_proxy.c.1317) proxy - found a host 127.0.0.1 9088 
+2014-12-30 12:41:02: (mod_proxy.c.396) connect delayed: 8 
+2014-12-30 12:41:02: (mod_proxy.c.998) proxy: fdevent-out 1 
+2014-12-30 12:41:02: (mod_proxy.c.1027) proxy - connect - delayed success 
+2014-12-30 12:41:02: (mod_proxy.c.967) proxy: fdevent-in 4 
+2014-12-30 12:41:02: (mod_proxy.c.665) proxy - have to read: 0 
+2014-12-30 12:41:02: (mod_proxy.c.1142) proxy - start 
+2014-12-30 12:41:10: (mod_proxy.c.1142) proxy - start 
+2014-12-30 12:42:48: (mod_proxy.c.1142) proxy - start 
+2014-12-30 15:04:46: (server.c.1558) server stopped by UID = 0 PID = 20608 

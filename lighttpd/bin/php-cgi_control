@@ -1,0 +1,37 @@
+#!/bin/bash
+BASE_DIR=`dirname $0`
+FCGI_BIN=${BASE_DIR}/spawn-fcgi
+PHP_CGI_BIN=/home/users/yanlong/.jumbo/php/bin/php-cgi
+stop() {
+	pids=`ps -ef | grep yanlong.*php-cgi$ |  awk '{print $2}'`
+	if [ "C$pids" = "C" ]; then
+		echo 'no alive php-cgi'
+		return
+	else
+		kill -9 `ps -ef | grep yanlong.*php-cgi$ |  awk '{print $2}'`
+	fi
+}
+start() {
+	stop
+	sleep 1
+		$FCGI_BIN -p  6666 -f  $PHP_CGI_BIN -F 128 >null &
+}
+
+case C"$1" in
+        C)
+                start
+                echo "Done!"
+                ;;
+        Cstart) 
+                start
+                echo "Done!"
+                ;;
+        Cstop)  
+                stop
+                echo "Done!"
+                ;;
+        C*)
+                echo "Usage: $0 {start|stop|info}"
+                ;;
+esac
+

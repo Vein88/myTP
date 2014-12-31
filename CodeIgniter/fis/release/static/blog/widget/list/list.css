@@ -1,0 +1,26 @@
+.nav-container {
+  width: 95%;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.nav-container h2 {
+  width: 90%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.nav-container .nav-left,
+.nav-container .nav-right {
+  width: 40%;
+  margin-left: 10%;
+  float: left;
+}
+.nav-container .nav-left ul,
+.nav-container .nav-right ul {
+  list-style: none;
+}
+.nav-container .nav-left ul li,
+.nav-container .nav-right ul li {
+  margin: 5px;
+}

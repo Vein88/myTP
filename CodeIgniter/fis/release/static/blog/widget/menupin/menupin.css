@@ -1,0 +1,19 @@
+.menu-pin {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #292929;
+}
+.menu-pin ul {
+  list-style: none;
+}
+.menu-pin ul li {
+  text-shadow: 0 1px 0 #ffffff, 0 -1px 0 #ffffff, 1px 0 0 #ffffff, -1px 0 0 #ffffff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  float: left;
+  width: 25%;
+}

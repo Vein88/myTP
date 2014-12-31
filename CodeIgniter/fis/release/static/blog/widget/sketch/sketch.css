@@ -1,0 +1,21 @@
+.sketch-container {
+  box-sizing: border-box;
+  width: 95%;
+  margin: 0 auto;
+  background-color: f1f1f1;
+  border-radius: 5px;
+  padding: 0 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.sketch-container h1 {
+  text-align: center;
+}
+.sketch-container h4 {
+  color: #585858;
+  text-align: right;
+}
+.sketch-container .sketch-content {
+  line-height: 14px;
+  font-size: 14px;
+  margin: 0 10px;
+}
