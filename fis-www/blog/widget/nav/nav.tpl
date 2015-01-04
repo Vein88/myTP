@@ -1,4 +1,4 @@
-i{*
+{*
 调用方法： 
 	{%widget name="blog:widget/nav/nav.tpl"%}
 *}

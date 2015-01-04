@@ -1,7 +1,7 @@
 //fis.cofig.set('settings.sprinter.csssprintes');
 fis.config.set('namespace', 'blog');
 
-//fis.config.set('root_dir', '/home/vein/myTP');
+fis.config.set('root_dir', '/home/vein/myTP');
 
 fis.config.set('roadmap.path', []);
 fis.config.set('modules.parser.less', 'less');
@@ -11,24 +11,25 @@ fis.config.merge({
 		domain: 'http://localhost:8242/',
 		path: [
 			{
-				reg: /^\/page\/(.*)$/,
-				url: '${namespace}/$1',
-				release: '/template/${namespace}/$1',
-			},
-			{
-				reg: /^\/widget\/(.*\.tpl)$/,
-				isMod: true,
+				reg: /^\/widget\/(.*\.tpl)$/i,
 				url: '${namespace}/widget/$1',
+				isMod: false,
 				release: '/template/${namespace}/widget/$1'
 			},
 			{
-				reg: /^\/widget\/(.*\.(less|css|js|jpg|png))$/,
-				isMod: true,
+				reg: /^\/widget\/(.*\.(less|css|js|jpg|png))$/i,
 				url: '${namespace}/widget/$1',
+				isMod: false,
 				release: '/static/${namespace}/widget/$1'
 			},
 			{
-				reg: /^\/static\/(.*\.(less|css|js|jpg|png))$/,
+				reg: /^\/page\/(.*)$/i,
+				url: '${namespace}/$1',
+				isMod: false,
+				release: '/template/${namespace}/$1'
+			},
+			{
+				reg: /^\/static\/(.*\.(less|css|js|jpg|png))$/i,
 				url: '${namespace}/$1',
 				release: '/static/${namespace}/$1'
 			},

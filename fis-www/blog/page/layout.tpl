@@ -1,4 +1,4 @@
-{%html framework='blog:static/lib/js/mod.js'%}
+{%html framework='common:static/js/mod.js'%}
 
 	{%head%}
 		<meta charset='UTF-8'>
@@ -7,9 +7,10 @@
 		<meta name='apple-mobile-web-app-status-bar-style' content='black' />
 		<meta name='format-detection' name='telephone=no' />
 		<title>vein`s blog</title>
-		{%require name='blog:static/lib/css/normalize.css' %}
+		{%require name='common:static/css/normalize.css' %}
 		{%require name='blog:static/css/common.less' %}
-
+		{%require name='common:static/zepto/zepto.js'%}
+		{%require name='blog:widget/sketch/sketch.js'%}
 		{%block name='head'%}{%/block%}
 	{%/head%}
 	{%body%}
