@@ -30,7 +30,7 @@ export EXEC_PATH=$dir
 export NODE_PATH=$dir/node_modules
 
 cd $oldPath
-App='app.js'
+App='index.js'
 if [ ! -f $App ];then
 	echo $App is not present.
 	exit 1

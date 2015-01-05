@@ -1,4 +1,11 @@
-global.config = require('./conf');
+"use strict";
+//v = 'test';
+var config = require('./conf');
+//var env = config.loadConfig('dev');
+//console.log(env);
+var config = require('./conf');
+var env = config('dev');
+console.log(env);
 
 var express = require('express');
 var route = require('./route');
@@ -14,6 +21,7 @@ app.set('jsonp callback name', 'cb');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/*', route.index);
+
 //app.get('/static/*', route.static); #静态资源。
 var server = http.createServer(app).listen(app.get('port'), function() {
 	console.log('Server start at port: ' + app.get('port'));
