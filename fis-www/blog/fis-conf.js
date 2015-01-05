@@ -13,19 +13,18 @@ fis.config.merge({
 			{
 				reg: /^\/widget\/(.*\.tpl)$/i,
 				url: '${namespace}/widget/$1',
-				isMod: false,
+				isMod: true,
 				release: '/template/${namespace}/widget/$1'
 			},
 			{
 				reg: /^\/widget\/(.*\.(less|css|js|jpg|png))$/i,
 				url: '${namespace}/widget/$1',
-				isMod: false,
+				isMod: true,
 				release: '/static/${namespace}/widget/$1'
 			},
 			{
 				reg: /^\/page\/(.*)$/i,
 				url: '${namespace}/$1',
-				isMod: false,
 				release: '/template/${namespace}/$1'
 			},
 			{

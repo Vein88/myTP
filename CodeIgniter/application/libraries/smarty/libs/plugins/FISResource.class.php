@@ -82,7 +82,7 @@ class FISResource {
                 $html .= 'require.resourceMap('.$resourceMap.');';
                 $html .= '</script>';
             }
-            if (@self::$arrStaticCollection['js']) {
+            if (self::$arrStaticCollection['js']) {
                 $arrURIs = &self::$arrStaticCollection['js'];
                 foreach ($arrURIs as $uri) {
                     if ($uri === self::$framework) {
@@ -150,6 +150,7 @@ class FISResource {
         if (!empty($arrResourceMap)) {
             $ret = str_replace('\\/', '/', json_encode($arrResourceMap));
         }
+	//print_r($ret);
         return  $ret;
     }
 
@@ -165,6 +166,7 @@ class FISResource {
             $strPath = preg_replace('/[\\/\\\\]+/', '/', $strDir . '/' . $strMapName);
             if(is_file($strPath)){
                 $map = json_decode(file_get_contents($strPath), true);
+		#print_r($map);
                 //读取domain.conf,对所有静态资源uri根据不同url，添加domain，方便本地调试
                 $domain = self::getDomain($smarty);
                 if($domain) {
@@ -327,7 +329,7 @@ class FISResource {
      */
     public static function getDomain($smarty) {
         $domainFile = 'domain.conf';
-        @$domainKey = $_GET['domain'] ? $_GET['domain'] : 'online';
+        $domainKey = $_GET['domain'] ? $_GET['domain'] : 'online';
         $configDirs = $smarty->getConfigDir();
         foreach($configDirs as $strDir) {
             $strDir = preg_replace('/[\\/\\\\]+/', '/', $strDir . '/' . $domainFile);
@@ -337,7 +339,7 @@ class FISResource {
                 break;
             }
         }
-        @$domainValue = $domains[$domainKey] ? $domains[$domainKey] : null;
+        $domainValue = $domains[$domainKey] ? $domains[$domainKey] : null;
         return $domainValue;
     }
 }

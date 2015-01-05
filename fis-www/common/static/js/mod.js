@@ -64,7 +64,6 @@ var require, define;
     }
 
     define = function(id, factory) {
-	console.log(id);
         factoryMap[id] = factory;
 
         var queue = loadingMap[id];
@@ -80,8 +79,6 @@ var require, define;
         id = require.alias(id);
 
         var mod = modulesMap[id];
-	console.log('id:' + id +', mod:' + mod);
-	console.log(factoryMap);
         if (mod) {
             return mod.exports;
         }

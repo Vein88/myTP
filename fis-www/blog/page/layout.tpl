@@ -9,9 +9,8 @@
 		<title>vein`s blog</title>
 		{%require name='common:static/css/normalize.css' %}
 		{%require name='blog:static/css/common.less' %}
-		{%require name='common:static/zepto/zepto.js'%}
-		{%require name='blog:widget/sketch/sketch.js'%}
-		{%block name='head'%}{%/block%}
+		{%require name='common:static/jquery/jquery.js'%}
+
 	{%/head%}
 	{%body%}
 		<header class='title-content'>

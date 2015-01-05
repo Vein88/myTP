@@ -1,4 +1,6 @@
 
-(function() {
-	console.log('success');
-})();
+module.exports = {
+	init: function(){
+		console.log('success');
+	}
+}
