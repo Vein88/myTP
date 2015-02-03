@@ -89,6 +89,7 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 	$application_folder = 'application';
+    header('Access-Control-Allow-Origin:*');
 
 /*
  *---------------------------------------------------------------
